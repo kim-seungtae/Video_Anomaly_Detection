@@ -1,1 +1,1 @@
-# Video_Anomaly_Detection
+# AI 영상인식 경진대회 [쏘카x한국정보학회]
