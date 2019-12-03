@@ -1,9 +1,53 @@
 <!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <header>
-    hi ㅋ
+  <div class="wrapper">
+    <div class="navi">
+      <p class="white_logo"><img src="{% static 'image/white_logo.png' %}" width=175px /></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="announce_out"><h2>지역별 사고현황</h2></div>
+    <hr class="announceline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </header>
-
 <body>
-    Report page
+    <br>
+    <br>
+    <br>
+    body채우기
+    <!-- <video width='320' height= '240' controls>
+        <source src="C:/Users/user/Desktop/Video_Anomaly_Detection/Web/Control_tower/media/WIN_20191203_16_01_43_Pro.mp4" type='video/mp4' %}">
+    </video>   -->
+    {{report.video}}
 </body>
+
+<footer>
+  <div class="foot">
+      (우)100-751 서울시 중구 소파로2길 10(예장동) &nbsp&nbsp&nbsp&nbsp&nbspTEL:02-3708-9110~1 &nbsp&nbsp&nbsp&nbsp&nbspFAX:02-3708-9112 &nbsp&nbspwebmaster@sewc.ac.kr<br>
+      Copyright(c) 2015SOONGEUL WOMENS COLLEDGE ALL Rights Reserved.
+  </div>
+  <img src="{% static 'image/black_logo.png' %}" width=130>
+  <br>
+  <br>
+  <br>
+</footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->

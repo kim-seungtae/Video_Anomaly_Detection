@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header>
+  <div class="wrapper">
+    <div class="navi">
+      <p class="white_logo"><img src="{% static 'image/white_logo.png' %}" width=175px /></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="announce_out"><h2>지역별 사고현황</h2></div>
+    <hr class="announceline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</header>
+<body>
+<br>
+<div class="middletitle">
+  <hr class="titleline">
+  <h2></h2>
+</div>
+<br>
+<br>
+
+<div class='table'>
+    <table style="margin:left; width:700;">
+        <tr>
+            <td><h3>{{report.get_area_division_display}}</h3><img src="{% static image_url %}" width="400"/></td>
+            <td>
+                <div><h4>위치 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 시간  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 사고 종류</h4></div>
+                {% for report in report_list %}
+                <a href="{% url 'tower:report' report.pk %}"><div>{{report.location}} &nbsp&nbsp&nbsp {{report.created_at}} &nbsp&nbsp&nbsp {{report.get_anomaly_division_display}}</div></a>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<footer>
+  <div class="foot">
+      (우)100-751 서울시 중구 소파로2길 10(예장동) &nbsp&nbsp&nbsp&nbsp&nbspTEL:02-3708-9110~1 &nbsp&nbsp&nbsp&nbsp&nbspFAX:02-3708-9112 &nbsp&nbspwebmaster@sewc.ac.kr<br>
+      Copyright(c) 2015SOONGEUL WOMENS COLLEDGE ALL Rights Reserved.
+  </div>
+  <img src="{% static 'image/black_logo.png' %}" width=130>
+  <br>
+  <br>
+  <br>
+</footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->
