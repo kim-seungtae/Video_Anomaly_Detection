@@ -11,7 +11,8 @@ def report_list(request, pk):
     report_list = Report.objects.filter(area_division=pk).order_by('-created_at')
     report = report_list[0]
     image_url = "image/" + str(report.area_division) + ".png"
-    return render(request, "tower/report_list.html", {'report_list': report_list, 'report': report, 'image_url': image_url})
+    num = len(report_list) + 1
+    return render(request, "tower/report_list.html", {'report_list': report_list, 'report': report, 'image_url': image_url, 'num': num})
 
 def report(request, pk):
     report = Report.objects.get(pk=pk)

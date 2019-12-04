@@ -17,7 +17,7 @@
     <br>
     <br>
     <br>
-    <div class="announce_out"><h2>지역별 사고현황</h2></div>
+    <div class="announce_out"><h2>사고 상세</h2></div>
     <hr class="announceline">
     <br>
     <br>
@@ -30,12 +30,45 @@
     <br>
     <br>
     <br>
-    body채우기
-    <!-- <video width='320' height= '240' controls>
-        <source src="C:/Users/user/Desktop/Video_Anomaly_Detection/Web/Control_tower/media/WIN_20191203_16_01_43_Pro.mp4" type='video/mp4' %}">
-    </video>   -->
-    {{report.video}}
+    <table style="width:1200px; text-align: center; margin:auto;" >
+        <tr>
+          <th><h3>영상</h3></th>
+          <th style="width:400;">위치</th>
+          <th>시간</th>
+          <th>사고 종류</th>
+        </tr>
+        <tr style="vertical-align: top">
+          <td rowspan=6 style="text-align:center;">            
+            <video  width='600' height= '400' controls>
+              <source src="{% static report.video.name %}" type='video/mp4' %}>
+            </video>
+          </td>
+          <td><br>{{report.location}}</td>
+          <td><br>{{report.created_at}}</td>
+          <td><br>{{report.get_anomaly_division_display}}</td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top;" colspan=3 rowspan=5> <h3>상황</h3>{{report.description}} </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </table>
 </body>
+<br>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 <footer>
   <div class="foot">

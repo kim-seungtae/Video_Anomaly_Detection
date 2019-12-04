@@ -133,15 +133,16 @@ input[type=text] {
 }
 
 .table{
-  margin: 0 0 0 340;
+  margin: 0 0 0 0;
   display:table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-table{
+/* table{
   margin: auto;
   width: 1500px;
-  border-collapse: collapse;
-}
+} */
 
 .table-row { display:table-row; }
 .table-cell { 
@@ -155,10 +156,6 @@ tr{
   border-bottom: 1px solid black;
 }
 
-td:nth-child(1){width:100px;text-align: center;}
-td:nth-child(2){width:750px;text-align: center;}
-td:nth-child(3){width:300px;text-align: center;}
-td:nth-child(4){width:10px;text-align: center;}
 
 .number{display: inline-block;}
 .number ul{display: inline-block; list-style: none; margin:0; padding:0;}
