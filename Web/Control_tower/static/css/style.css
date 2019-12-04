@@ -184,7 +184,6 @@ tr{
 a{text-decoration: none;color:black;}
 
 footer, .push {
-  background-color: gray;
   height: 60px;
 }
 
@@ -193,7 +192,6 @@ footer, .push {
   float:left;
   margin: 8 0 0 350;
   font-weight: 500;
-  color: black;
 }
 
 footer img{
