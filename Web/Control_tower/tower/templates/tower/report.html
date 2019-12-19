@@ -1,9 +1,87 @@
 <!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <header>
-    hi ㅋ
+  <div class="wrapper">
+    <div class="navi">
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </header>
-
 <body>
-    Report page
+    <br>
+    <br>
+    <br>
+    <div class="announce_out"><h2 style="color:black;">사고 상세</h2></div>
+
+    <table style=" width:1700px; text-align: center; margin:auto;" >
+        <tr>
+          <th><h3>영상</h3></th>
+          <th>위치</th>
+          <th>시간</th>
+          <th>사고 종류</th>
+          <th>차량 정보</th>
+        </tr>
+        <tr style="vertical-align: top">
+          <td rowspan=6 style="text-align:center;">            
+            <video width='800px' height='600px' controls>
+              <source src="{% static report.video.name %}" type='video/mp4' %}>
+            </video>
+          </td>
+          <td><br>{{report.location}}</td>
+          <td><br>{{report.created_at}}</td>
+          <td><br>{{report.get_anomaly_division_display}}</td>
+          <td><br>{{report.description}}</td>
+        </tr>
+        <tr>
+          
+        </tr>
+        <tr>
+          <td style="vertical-align: top;" colspan=4 rowspan=4> <h3>사진</h3> <img style="width:600px; height:400px;" src="{% static report.picture.url %}"> </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+    </table>
 </body>
+<br>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer>
+    <div class="foot">
+        <img src="{% static 'image/footer.png' %}">
+    </div>
+    <br>
+    <br>
+    <br>
+  </footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->

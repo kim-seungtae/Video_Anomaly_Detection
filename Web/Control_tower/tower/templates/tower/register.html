@@ -1,11 +1,87 @@
 <!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <header>
-    Register Page ㅋ
+  <div class="wrapper">
+    <div class="navi">
+      <p class="white_logo"><img src="{% static 'image/white_logo.png' %}" width=175px /></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="announce_out"><h2>지역별 사고현황</h2></div>
+    <hr class="announceline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </header>
-
 <body>
+    <br/><br/><br/><br/><br/><br/><br/>
     <form method="POST" enctype="multipart/form-data">
-        
+        {% csrf_token %}
+        <div>
+            차량 정보
+            <textarea name="description"></textarea>
+        </div><br/><br/><br/>
+        <div>
+            location
+            <input name="location"/>
+        </div><br/><br/><br/>
+        <div>
+            anomaly_division
+            <select name="anomaly_division">
+                <option value=1 selected="selected">낙석</option>
+                <option value=2>추돌 사고</option>
+                <option value=3>전복 사고</option>
+                <option value=4>야생 동물</option>
+            </select>
+        </div><br/><br/><br/><br/>
+        <div>
+            area_division
+            <select name="area_division">
+                <option value=1 selected="selected">서울/경기</option>
+                <option value=2>전라도</option>
+                <option value=3>충청도</option>
+                <option value=4>경상북도</option>
+                <option value=5>강원도</option>
+                <option value=6>경상남도</option>
+            </select>
+        </div><br/><br/><br/><br/>
+        <div>
+            File
+            <input type="file" name="video"/>
+        </div><br/><br/><br/><br/>
+
+        <div>
+            image
+            <input type="file" name="picture"/>
+        </div><br/><br/><br/><br/>
+        <button type="submit">등록</button>
     </form>
+    
+        <a href="{% url 'tower:main' %}"> 메인 </a>
 </body>
+
+<footer>
+  <div class="foot">
+      <img src="{% static 'image/footer.png' %}">
+  </div>
+  <br>
+  <br>
+  <br>
+</footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->
