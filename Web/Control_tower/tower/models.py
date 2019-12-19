@@ -15,3 +15,4 @@ class Report(models.Model):
     anomaly_division = models.IntegerField(choices=ANOMALY_CHOICE)
     area_division = models.IntegerField(choices=DIVISION_CHOICE)
     video = models.FileField(upload_to="", null=True)
+    picture = models.ImageField()

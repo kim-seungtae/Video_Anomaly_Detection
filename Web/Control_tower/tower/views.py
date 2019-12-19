@@ -27,6 +27,7 @@ def register(request):
             'video': request.FILES['video'],
             'anomaly_division': request.POST.get('anomaly_division'),
             'area_division': request.POST.get('area_division'),
+            'picture' : request.FILES['picture']
         }
         report = Report.objects.create(**report_context)
         return redirect("tower:register")

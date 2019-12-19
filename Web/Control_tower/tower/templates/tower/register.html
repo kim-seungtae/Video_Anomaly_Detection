@@ -31,7 +31,7 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div>
-            description
+            차량 정보
             <textarea name="description"></textarea>
         </div><br/><br/><br/>
         <div>
@@ -61,6 +61,11 @@
         <div>
             File
             <input type="file" name="video"/>
+        </div><br/><br/><br/><br/>
+
+        <div>
+            image
+            <input type="file" name="picture"/>
         </div><br/><br/><br/><br/>
         <button type="submit">등록</button>
     </form>

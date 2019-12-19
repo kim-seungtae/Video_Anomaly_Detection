@@ -29,27 +29,31 @@
     <br>
     <div class="announce_out"><h2 style="color:black;">사고 상세</h2></div>
 
-    <table style="width:1200px; text-align: center; margin:auto;" >
+    <table style=" width:1700px; text-align: center; margin:auto;" >
         <tr>
           <th><h3>영상</h3></th>
-          <th style="width:400;">위치</th>
+          <th>위치</th>
           <th>시간</th>
           <th>사고 종류</th>
+          <th>차량 정보</th>
         </tr>
         <tr style="vertical-align: top">
           <td rowspan=6 style="text-align:center;">            
-            <video  width='600' height= '400' controls>
+            <video width='800px' height='600px' controls>
               <source src="{% static report.video.name %}" type='video/mp4' %}>
             </video>
           </td>
           <td><br>{{report.location}}</td>
           <td><br>{{report.created_at}}</td>
           <td><br>{{report.get_anomaly_division_display}}</td>
+          <td><br>{{report.description}}</td>
         </tr>
         <tr>
-          <td style="vertical-align: top;" colspan=3 rowspan=5> <h3>상황</h3>{{report.description}} </td>
+          
         </tr>
-        <tr></tr>
+        <tr>
+          <td style="vertical-align: top;" colspan=4 rowspan=4> <h3>사진</h3> <img style="width:600px; height:400px;" src="{% static report.picture.url %}"> </td>
+        </tr>
         <tr></tr>
         <tr></tr>
         <tr></tr>
