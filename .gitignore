@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 *.zip
 *.pyc
 __pycache__/
-=======
-__pycache__/
-*.pyc
-*.zip
->>>>>>> e0796e19ef091f3ac4689b00a831cd03a7402867
+.DS_Store/
