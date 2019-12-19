@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ai_ssd</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">ELC39 Driver</string>
+    <string name="nav_header_subtitle">elc39_ai@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading"><br>블랙박스 영상을 분석중입니다.\n</br><br>잠시만 기다려주세요.</br></string>
+</resources>
