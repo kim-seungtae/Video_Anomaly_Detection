@@ -1,0 +1,11 @@
+Web/Scripts/activate.bat을 실행시킨다
+Web/Control_tower 디렉토리에서 python manage.py runserver 입력
+
+사고 등록하기
+
+127.0.0.1:8000/register를 url에 입력해서 이동.
+그러면동영상이 Web/Control_tower/ 디렉토리에 생기는데 이걸 Web/Control_tower/static/ 디렉토리로 옮겨준다. 
+
+사고 확인하기
+
+main(지역 리스트) -> report_list(사고 리스트) -> report(사고) 순서로 볼 수 있음

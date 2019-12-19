@@ -1,11 +1,66 @@
 <!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <header>
-    hi ㅋ
+  <div class="wrapper">
+    <div class="navi">
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 </header>
-
 <body>
-    <a href="{% url 'tower:report' %}">
-        link1
-    </a>
+<br>
+<div class="middletitle">
+  <hr class="titleline">
+  <h2></h2>
+</div>
+<br>
+<br>
+<div class="announce_out"><h2 style="color:black;">지역별 사고현황</h2></div>
+<div class="table">
+    <div class='table-row'>
+      <a class='table-cell' href="{% url 'tower:report_list' 1 %}"><h3>서울/경기</h3><img src="{% static 'image/1.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+      <a class='table-cell' href="{% url 'tower:report_list' 2 %}"><h3>강원도</h3><img src="{% static 'image/3.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+      <a class='table-cell' href="{% url 'tower:report_list' 3 %}"><h3>충청도</h3><img src="{% static 'image/5.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="table-row">
+      <a class='table-cell' href="{% url 'tower:report_list' 4 %}"><h3>전라도</h3><img src="{% static 'image/2.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+      <a class='table-cell' href="{% url 'tower:report_list' 5 %}"><h3>경상북도</h3><img src="{% static 'image/4.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+      <a class='table-cell' href="{% url 'tower:report_list' 6 %}"><h3>경상남도</h3><img src="{% static 'image/6.png' %}" width="400"/></a>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+</div>
 </body>
+
+<footer>
+  <div class="foot">
+      <img src="{% static 'image/footer.png' %}">
+  </div>
+  <br>
+  <br>
+  <br>
+</footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->

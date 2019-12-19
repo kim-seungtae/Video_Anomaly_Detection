@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header>
+  <div class="wrapper">
+    <div class="navi">
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr class="headline">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</header>
+<body>
+<br>
+<div class="middletitle">
+  <hr class="titleline">
+  <h2></h2>
+</div>
+<br>
+<br>
+<div class="announce_out"><h2 style="color:black;">지역별 사고현황</h2></div>
+
+<table style="width:1000px; text-align: center; margin:auto;" >
+    <tr>
+      <th><h3>{{report.get_area_division_display}}</h3></th>
+      <th style="width:400;">위치</th>
+      <th>시간</th>
+      <th>사고 종류</th>
+    </tr>
+    <tr>
+      <td rowspan={{num}} style="text-align: center;"><img src="{% static image_url %}" width="400"/></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    {% for report in report_list %}
+    <tr>
+      <td style="vertical-align: top;" onClick="location.href=`{% url 'tower:report' report.pk %}`" style="width:400;">{{report.location}}</td>
+      <td style="vertical-align: top;" onClick="location.href=`{% url 'tower:report' report.pk %}`" >{{report.created_at}}</td>
+      <td style="vertical-align: top;" onClick="location.href=`{% url 'tower:report' report.pk %}`" >{{report.get_anomaly_division_display}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+<br>
+<br>
+<br>
+<footer>
+  <div class="foot">
+      <img src="{% static 'image/footer.png' %}">
+  </div>
+  <br>
+  <br>
+  <br>
+</footer>
+</html>
+<!-- <div class="banner">
+
+</div> -->
